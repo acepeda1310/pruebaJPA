@@ -8,7 +8,7 @@ import javax.persistence.*;
  *
  */
 @Entity
-@Table(name="DIRECCIONES")
+@Table(name="DIRECCIONES") 
 public class Direccion implements Serializable {
 	
 	@Id

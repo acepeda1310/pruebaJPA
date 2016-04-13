@@ -8,7 +8,7 @@ import javax.persistence.*;
  *
  */
 @Entity
-@Table(name="CLIENTES")
+@Table(name="CLIENTES") 
 public class Cliente implements Serializable {
 
 	
@@ -18,7 +18,7 @@ public class Cliente implements Serializable {
 	private String dni;
 	private String nombre;
 	private String apellidos;
-	@OneToOne
+	@OneToOne(cascade=CascadeType.PERSIST)
 	private Direccion direccion;
 	private int telefono;
 

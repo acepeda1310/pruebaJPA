@@ -1,18 +1,14 @@
 package com.adrian.pruebas.jpa;
 
-import static javax.persistence.AccessType.PROPERTY;
-
 import java.io.Serializable;
 
-import javax.persistence.Access;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "ARTICULOS")
-@Access(PROPERTY)
+@Table(name = "ARTICULOS") 
 public class Articulo implements Serializable{
 	/**
 	 * 
@@ -20,7 +16,8 @@ public class Articulo implements Serializable{
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue
-	private Long id;
+	private Long codigo;
+	
 	private String descripcion;
 	private int stock;
 	private double precio;
@@ -29,11 +26,11 @@ public class Articulo implements Serializable{
 		
 	}
 	
-	public Long getId() {
-		return id;
+	public Long getCodigo() {
+		return codigo;
 	}
-	public void setId(Long id) {
-		this.id = id;
+	public void setCodigo(Long codigo) {
+		this.codigo = codigo;
 	}
 	public String getDescripcion() {
 		return descripcion;

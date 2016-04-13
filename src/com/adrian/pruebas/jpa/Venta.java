@@ -15,7 +15,7 @@ public class Venta implements Serializable {
 	@Id
 	@GeneratedValue
 	private Long id;
-	@ManyToOne
+	@ManyToOne(cascade=CascadeType.PERSIST)
 	private Articulo articulo;
 	@ManyToOne(cascade = ALL)
 	private Cliente cliente;
